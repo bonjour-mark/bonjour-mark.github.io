@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>编译升级gcc-4.8.1.md | 何妨吟啸且徐行</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="升级gcc-4.8.1下载cd /opt/docker/ wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-4.8.1/gcc-4.8.1.tar.bz2解压tar -jxvf gcc-4.8.1.tar.bz2下载依赖组件gmp-4.3.2.tar.bz2、mpfr-2.4.2.tar.bz2、mpc-0.8.1.tar.g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编译升级gcc-4.8.1.md">
+<meta property="og:url" content="http://yoursite.com/2019/07/12/编译升级gcc-4-8-1-md/index.html">
+<meta property="og:site_name" content="何妨吟啸且徐行">
+<meta property="og:description" content="升级gcc-4.8.1下载cd /opt/docker/ wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-4.8.1/gcc-4.8.1.tar.bz2解压tar -jxvf gcc-4.8.1.tar.bz2下载依赖组件gmp-4.3.2.tar.bz2、mpfr-2.4.2.tar.bz2、mpc-0.8.1.tar.g">
+<meta property="og:locale" content="CN">
+<meta property="og:updated_time" content="2019-07-12T08:57:15.850Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编译升级gcc-4.8.1.md">
+<meta name="twitter:description" content="升级gcc-4.8.1下载cd /opt/docker/ wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-4.8.1/gcc-4.8.1.tar.bz2解压tar -jxvf gcc-4.8.1.tar.bz2下载依赖组件gmp-4.3.2.tar.bz2、mpfr-2.4.2.tar.bz2、mpc-0.8.1.tar.g">
+  
+    <link rel="alternate" href="/atom.xml" title="何妨吟啸且徐行" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">何妨吟啸且徐行</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-编译升级gcc-4-8-1-md" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/12/编译升级gcc-4-8-1-md/" class="article-date">
+  <time datetime="2019-07-12T08:56:46.000Z" itemprop="datePublished">2019-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      编译升级gcc-4.8.1.md
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="升级gcc-4-8-1"><a href="#升级gcc-4-8-1" class="headerlink" title="升级gcc-4.8.1"></a>升级gcc-4.8.1</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><pre><code>cd /opt/docker/
+wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-4.8.1/gcc-4.8.1.tar.bz2</code></pre><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><pre><code>tar -jxvf gcc-4.8.1.tar.bz2</code></pre><h3 id="下载依赖组件gmp-4-3-2-tar-bz2、mpfr-2-4-2-tar-bz2、mpc-0-8-1-tar-gz"><a href="#下载依赖组件gmp-4-3-2-tar-bz2、mpfr-2-4-2-tar-bz2、mpc-0-8-1-tar-gz" class="headerlink" title="下载依赖组件gmp-4.3.2.tar.bz2、mpfr-2.4.2.tar.bz2、mpc-0.8.1.tar.gz"></a>下载依赖组件gmp-4.3.2.tar.bz2、mpfr-2.4.2.tar.bz2、mpc-0.8.1.tar.gz</h3><pre><code>cd gcc-4.8.1
+./contrib/download_prerequisites</code></pre><h3 id="解压三个包并移到gcc-4-8-1目录"><a href="#解压三个包并移到gcc-4-8-1目录" class="headerlink" title="解压三个包并移到gcc-4.8.1目录"></a>解压三个包并移到gcc-4.8.1目录</h3><pre><code>tar -xjf gmp-4.3.2.tar.bz2
+tar -xjf mpfr-2.4.2.tar.bz2
+tar -xzf mpc-0.8.1.tar.gz
+mv gmp-4.3.2 gcc-4.8.1/gmp
+mv mpfr-2.4.2 gcc-4.8.1/mpfr
+mv mpc-0.8.1 gcc-4.8.1/mpc</code></pre><h3 id="创建编译的目录并编译"><a href="#创建编译的目录并编译" class="headerlink" title="创建编译的目录并编译"></a>创建编译的目录并编译</h3><pre><code>mkdir gcc-build-4.8.1
+cd     gcc-build-4.8.1
+../gcc-4.8.1/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+make -j4
+make install</code></pre><h2 id="将最新动态库libstdc-so-6-0-18复制到-usr-lib64目录下"><a href="#将最新动态库libstdc-so-6-0-18复制到-usr-lib64目录下" class="headerlink" title="将最新动态库libstdc++.so.6.0.18复制到/usr/lib64目录下"></a>将最新动态库libstdc++.so.6.0.18复制到/usr/lib64目录下</h2><pre><code>cp /opt/docker/build_gcc_4.8.1/x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.18 /usr/lib64</code></pre><h3 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h3><pre><code>cd /usr/lib64</code></pre><h3 id="删除旧链接"><a href="#删除旧链接" class="headerlink" title="删除旧链接"></a>删除旧链接</h3><pre><code>rm -rf libstdc++.so.6</code></pre><h3 id="建立新链接"><a href="#建立新链接" class="headerlink" title="建立新链接"></a>建立新链接</h3><pre><code>ln -s libstdc++.so.6.0.18 libstdc++.so.6</code></pre><h3 id="查询GLIBC的版本"><a href="#查询GLIBC的版本" class="headerlink" title="查询GLIBC的版本"></a>查询GLIBC的版本</h3><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBC</code></pre><h2 id="升级glibc-2-17"><a href="#升级glibc-2-17" class="headerlink" title="升级glibc-2.17"></a>升级glibc-2.17</h2><h3 id="下载并解压"><a href="#下载并解压" class="headerlink" title="下载并解压"></a>下载并解压</h3><pre><code>cd /opt/docker/
+wget http://ftp.gnu.org/gnu/glibc/glibc-2.17.tar.gz
+tar -zxf glibc-2.17.tar.gz</code></pre><h3 id="创建编译的目录并编译-1"><a href="#创建编译的目录并编译-1" class="headerlink" title="创建编译的目录并编译"></a>创建编译的目录并编译</h3><pre><code>cd glibc-2.17
+mkdir build
+cd build
+../configure --prefix=/usr
+make -j4
+make install</code></pre><h3 id="确认glibc版本升级成功"><a href="#确认glibc版本升级成功" class="headerlink" title="确认glibc版本升级成功"></a>确认glibc版本升级成功</h3><pre><code>strings /lib64/libc.so.6 |grep GLIBC</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/12/编译升级gcc-4-8-1-md/" data-id="cjxzvbiuo0002439hkctc0o8g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/12/hexo部署到GitHub/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo部署到GitHub</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/12/编译升级gcc-4-8-1-md/">编译升级gcc-4.8.1.md</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/12/hexo部署到GitHub/">hexo部署到GitHub</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/12/hexo在RHEL6-5上的部署说明/">hexo在RHEL6.5上的部署说明</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Mark<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
