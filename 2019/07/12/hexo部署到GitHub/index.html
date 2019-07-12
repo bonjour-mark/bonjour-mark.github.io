@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>hexo部署到GitHub | 何妨吟啸且徐行</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、注册GitHub，创建免费仓库bonjour-mark.github.ioSSH授权ssh-keygen -t rsa          默认三次回车，会在 /root/.ssh/ 目录下生成id_rsa(秘钥)id_rsa.pub(公钥)，将id_rsa.pub公钥的内容复制到GitHub个人设置的SSH keys里   联通测试ssh -T git@github.com  默认yes，最后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo部署到GitHub">
+<meta property="og:url" content="http://yoursite.com/2019/07/12/hexo部署到GitHub/index.html">
+<meta property="og:site_name" content="何妨吟啸且徐行">
+<meta property="og:description" content="1、注册GitHub，创建免费仓库bonjour-mark.github.ioSSH授权ssh-keygen -t rsa          默认三次回车，会在 /root/.ssh/ 目录下生成id_rsa(秘钥)id_rsa.pub(公钥)，将id_rsa.pub公钥的内容复制到GitHub个人设置的SSH keys里   联通测试ssh -T git@github.com  默认yes，最后">
+<meta property="og:locale" content="CN">
+<meta property="og:updated_time" content="2019-07-12T08:43:31.862Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo部署到GitHub">
+<meta name="twitter:description" content="1、注册GitHub，创建免费仓库bonjour-mark.github.ioSSH授权ssh-keygen -t rsa          默认三次回车，会在 /root/.ssh/ 目录下生成id_rsa(秘钥)id_rsa.pub(公钥)，将id_rsa.pub公钥的内容复制到GitHub个人设置的SSH keys里   联通测试ssh -T git@github.com  默认yes，最后">
+  
+    <link rel="alternate" href="/atom.xml" title="何妨吟啸且徐行" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">何妨吟啸且徐行</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hexo部署到GitHub" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/12/hexo部署到GitHub/" class="article-date">
+  <time datetime="2019-07-12T08:42:51.000Z" itemprop="datePublished">2019-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo部署到GitHub
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、注册GitHub，创建免费仓库"><a href="#1、注册GitHub，创建免费仓库" class="headerlink" title="1、注册GitHub，创建免费仓库"></a>1、注册GitHub，创建免费仓库</h2><pre><code>bonjour-mark.github.io</code></pre><h2 id="SSH授权"><a href="#SSH授权" class="headerlink" title="SSH授权"></a>SSH授权</h2><pre><code>ssh-keygen -t rsa        </code></pre><hr>
+<blockquote>
+<p>默认三次回车，会在 /root/.ssh/ 目录下生成id_rsa(秘钥)id_rsa.pub(公钥)，将id_rsa.pub公钥的内容复制到GitHub个人设置的SSH keys里</p>
+</blockquote>
+<hr>
+<h2 id="联通测试"><a href="#联通测试" class="headerlink" title="联通测试"></a>联通测试</h2><pre><code>ssh -T git@github.com</code></pre><hr>
+<blockquote>
+<p>默认yes，最后会看到成功的提示(开头提示的网络不通请忽略)</p>
+</blockquote>
+<hr>
+<h2 id="创建博客文件"><a href="#创建博客文件" class="headerlink" title="创建博客文件"></a>创建博客文件</h2><pre><code>cd /opt/blog/source/_posts
+hexo new &apos;hexo轻博客在RHEL6.5下的安装部署说明&apos;</code></pre><hr>
+<blockquote>
+<p>   目录下生成 hexo轻博客在RHEL6.5下的安装部署说明.md 的文件</p>
+</blockquote>
+<hr>
+<pre><code>vi hexo轻博客在RHEL6.5下的安装部署说明.md</code></pre><hr>
+<blockquote>
+<p>将已经写好的markdown格式内容复制到该文件里保存并退出</p>
+</blockquote>
+<hr>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><pre><code>cd /opt/blog/
+vi _config.yml</code></pre><hr>
+<blockquote>
+<p>将下面的内容复制到该文件最后的deploy：节点保存并退出(注意各分支type、repository、branch冒号后和内容自建要有空格，切记，否则会部署失败)</p>
+</blockquote>
+<hr>
+<pre><code>type: git
+repository: git@github.com:bonjour-mark/bonjour-mark.github.io
+branch:    master    </code></pre><hr>
+<h2 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h2><pre><code>npm install hexo-deployer-git --save
+hexo clean
+hexo g
+hexo d</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/12/hexo部署到GitHub/" data-id="cjxzuwg5g0001x19hmfdih2qa" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/12/hexo在RHEL6-5上的部署说明/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo在RHEL6.5上的部署说明</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/12/hexo部署到GitHub/">hexo部署到GitHub</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/12/hexo在RHEL6-5上的部署说明/">hexo在RHEL6.5上的部署说明</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Mark<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

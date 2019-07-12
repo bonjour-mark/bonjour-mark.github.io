@@ -62,6 +62,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo部署到GitHub" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/12/hexo部署到GitHub/" class="article-date">
+  <time datetime="2019-07-12T08:42:51.000Z" itemprop="datePublished">2019-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/12/hexo部署到GitHub/">hexo部署到GitHub</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、注册GitHub，创建免费仓库"><a href="#1、注册GitHub，创建免费仓库" class="headerlink" title="1、注册GitHub，创建免费仓库"></a>1、注册GitHub，创建免费仓库</h2><pre><code>bonjour-mark.github.io</code></pre><h2 id="SSH授权"><a href="#SSH授权" class="headerlink" title="SSH授权"></a>SSH授权</h2><pre><code>ssh-keygen -t rsa        </code></pre><hr>
+<blockquote>
+<p>默认三次回车，会在 /root/.ssh/ 目录下生成id_rsa(秘钥)id_rsa.pub(公钥)，将id_rsa.pub公钥的内容复制到GitHub个人设置的SSH keys里</p>
+</blockquote>
+<hr>
+<h2 id="联通测试"><a href="#联通测试" class="headerlink" title="联通测试"></a>联通测试</h2><pre><code>ssh -T git@github.com</code></pre><hr>
+<blockquote>
+<p>默认yes，最后会看到成功的提示(开头提示的网络不通请忽略)</p>
+</blockquote>
+<hr>
+<h2 id="创建博客文件"><a href="#创建博客文件" class="headerlink" title="创建博客文件"></a>创建博客文件</h2><pre><code>cd /opt/blog/source/_posts
+hexo new &apos;hexo轻博客在RHEL6.5下的安装部署说明&apos;</code></pre><hr>
+<blockquote>
+<p>   目录下生成 hexo轻博客在RHEL6.5下的安装部署说明.md 的文件</p>
+</blockquote>
+<hr>
+<pre><code>vi hexo轻博客在RHEL6.5下的安装部署说明.md</code></pre><hr>
+<blockquote>
+<p>将已经写好的markdown格式内容复制到该文件里保存并退出</p>
+</blockquote>
+<hr>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><pre><code>cd /opt/blog/
+vi _config.yml</code></pre><hr>
+<blockquote>
+<p>将下面的内容复制到该文件最后的deploy：节点保存并退出(注意各分支type、repository、branch冒号后和内容自建要有空格，切记，否则会部署失败)</p>
+</blockquote>
+<hr>
+<pre><code>type: git
+repository: git@github.com:bonjour-mark/bonjour-mark.github.io
+branch:    master    </code></pre><hr>
+<h2 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h2><pre><code>npm install hexo-deployer-git --save
+hexo clean
+hexo g
+hexo d</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/12/hexo部署到GitHub/" data-id="cjxzuwg5g0001x19hmfdih2qa" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hexo在RHEL6-5上的部署说明" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/12/hexo在RHEL6-5上的部署说明/" class="article-date">
@@ -99,56 +168,7 @@ npm install    </code></pre><h3 id="启动hexo服务"><a href="#启动hexo服务
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/12/hexo在RHEL6-5上的部署说明/" data-id="cjxztif240001ac9hggkrpiqm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/12/hello-world/" class="article-date">
-  <time datetime="2019-07-12T05:21:13.448Z" itemprop="datePublished">2019-07-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/12/hello-world/" data-id="cjxztif1z0000ac9h6jmuskne" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/12/hexo在RHEL6-5上的部署说明/" data-id="cjxzuwg5c0000x19hp4lr8a3x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,11 +209,11 @@ npm install    </code></pre><h3 id="启动hexo服务"><a href="#启动hexo服务
       <ul>
         
           <li>
-            <a href="/2019/07/12/hexo在RHEL6-5上的部署说明/">hexo在RHEL6.5上的部署说明</a>
+            <a href="/2019/07/12/hexo部署到GitHub/">hexo部署到GitHub</a>
           </li>
         
           <li>
-            <a href="/2019/07/12/hello-world/">Hello World</a>
+            <a href="/2019/07/12/hexo在RHEL6-5上的部署说明/">hexo在RHEL6.5上的部署说明</a>
           </li>
         
       </ul>
